@@ -61,7 +61,7 @@ namespace CIS411FinalProject.WebForms
         {
             if (Session["cart"] != null)
             {
-                MessageLbl.Text = "";
+                MessageLbl1.Text = "";
                 cart = getCart();
                 int d;
                 int b;
@@ -76,11 +76,11 @@ namespace CIS411FinalProject.WebForms
                         if (!checkForDuplicate(selectedBook, cart))
                         {
                             cart.Add(co);
-                            MessageLbl.Text = "Item added: " + selectedBook.Title.ToString() + " Quantity: " + b.ToString();
+                            MessageLbl1.Text = "Item added: " + selectedBook.Title.ToString() + ", Quantity: " + b.ToString();
                         }
                         else
                         {
-                            MessageLbl.Text = "The item " + selectedBook.Title.ToString()+" has already been added to the cart. Please select a different item.";
+                            MessageLbl1.Text = "The item " + selectedBook.Title.ToString()+" has already been added to the cart. Please select a different item.";
                         }
                     }
                     if (d > 0)
@@ -91,18 +91,18 @@ namespace CIS411FinalProject.WebForms
                         if (!checkForDuplicate(selectedDvd, cart))
                         {
                             cart.Add(co);
-                            MessageLbl.Text += System.Environment.NewLine + System.Environment.NewLine+ " Item added: " + selectedDvd.Title.ToString() + " Quantity: " + d.ToString();
+                            MessageLbl2.Text += "Item added: " + selectedDvd.Title.ToString() + ", Quantity: " + d.ToString();
                         }
                         else
                         {
-                            MessageLbl.Text += "The item "+ selectedDvd.Title.ToString() +" has already been added to the cart. Please select a different item.";
+                            MessageLbl2.Text += "The item "+ selectedDvd.Title.ToString() +" has already been added to the cart. Please select a different item.";
                         }
                     }
                     Session["cart"] = cart;
                 }
                 else
                 {
-                    MessageLbl.Text = "One of the quantities must be more than 0. Otherwise, Please Click Exit.";
+                    MessageLbl1.Text = "One of the quantities must be more than 0. Otherwise, Please Click Exit.";
                 }
             }
         }
@@ -116,7 +116,7 @@ namespace CIS411FinalProject.WebForms
             }
             else
             {
-                MessageLbl.Text = "You must have at least one item in your cart to proceed to the checkout screen.";
+                MessageLbl1.Text = "You must have at least one item in your cart to proceed to the checkout screen.";
             }
         }
 

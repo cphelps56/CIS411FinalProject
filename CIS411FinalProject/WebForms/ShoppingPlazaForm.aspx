@@ -9,6 +9,7 @@
     <style type="text/css">
         .auto-style1 {
             width: 674px;
+            margin-bottom: 0px;
         }
         .auto-style3 {
             width: 152px;
@@ -85,7 +86,9 @@
             </tr>
             <tr>
                 <td class="auto-style6">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style3">
+                    <asp:Label ID="MessageLbl1" runat="server" CssClass="MessageLabel" ></asp:Label>
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
@@ -94,8 +97,7 @@
             <tr>
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style3">
-                    <asp:Label ID="MessageLbl" runat="server"></asp:Label>
-                </td>
+                    &nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td class="auto-style4">&nbsp;</td>
@@ -104,16 +106,28 @@
             <tr>
                 <td class="auto-style8"></td>
                 <td class="auto-style9">
+                    <asp:Label ID="MessageLbl2" runat="server" CssClass="MessageLabel" ></asp:Label>
+                </td>
+                <td class="auto-style11">
+                    &nbsp;</td>
+                <td class="auto-style11"></td>
+                <td class="auto-style12">
+                    &nbsp;</td>
+                <td class="auto-style13"></td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style9">
                     <asp:Button ID="addBtn" runat="server" Text="Add" OnClick="addBtn_Click" Width="105px" />
                 </td>
                 <td class="auto-style11">
                     <asp:Button ID="checkoutBtn" runat="server" Text="Checkout" OnClick="checkoutBtn_Click" />
                 </td>
-                <td class="auto-style11"></td>
+                <td class="auto-style11">&nbsp;</td>
                 <td class="auto-style12">
                     <asp:Button ID="ExitBtn" runat="server" Text="Exit" Width="104px" OnClick="ExitBtn_Click" />
                 </td>
-                <td class="auto-style13"></td>
+                <td class="auto-style13">&nbsp;</td>
             </tr>
         </table>
     

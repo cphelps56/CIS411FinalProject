@@ -76,13 +76,22 @@ namespace CIS411FinalProject.WebForms {
         protected global::System.Web.UI.WebControls.Label DVDPriceValLbl;
         
         /// <summary>
-        /// MessageLbl control.
+        /// MessageLbl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MessageLbl;
+        protected global::System.Web.UI.WebControls.Label MessageLbl1;
+        
+        /// <summary>
+        /// MessageLbl2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MessageLbl2;
         
         /// <summary>
         /// addBtn control.

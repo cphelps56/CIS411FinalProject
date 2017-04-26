@@ -34,6 +34,11 @@ label {
     margin-top: 1em;
     width: 15em;
 }
+.MessageLabel{
+    font-size: 100%;
+    color: red;
+}
+
 
 /* Specific extra styles for some elements */
 #ExitBtn{
@@ -45,10 +50,7 @@ label {
     margin-left:10em;
 }
 
-#MessageLbl{
-    font-size:110%;
-    color:red
-}
+
 
 
 
