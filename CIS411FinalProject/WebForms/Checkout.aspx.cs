@@ -91,7 +91,7 @@ namespace CIS411FinalProject.WebForms
                 totalDiscount += (price * discount);
             }
 
-            TotalLbl.Text = "Total amount is " + totalPrice.ToString("c") + ". You got a discount of " + totalDiscount.ToString("c");
+            TotalLbl.Text = "Total amount is " + (totalPrice - totalDiscount).ToString("c") + ". You got a discount of " + totalDiscount.ToString("c");
         }
     }
 }
