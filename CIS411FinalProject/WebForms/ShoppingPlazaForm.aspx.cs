@@ -13,10 +13,9 @@ namespace CIS411FinalProject.WebForms
     {
 
         static List<CartObject> cart = new List<CartObject>();
-        List<Product> allProducts;
+        List<Product> allProducts = new List<Product>();
         List<Product> bookList = new List<Product>();
         List<Product> dvdList = new List<Product>();
-        static List<int> ints = new List<int>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,6 +26,7 @@ namespace CIS411FinalProject.WebForms
 
             bookList = getBooks();
             dvdList = getDvds();
+
 
             if(!IsPostBack)
             {
@@ -62,6 +62,7 @@ namespace CIS411FinalProject.WebForms
             if (Session["cart"] != null)
             {
                 MessageLbl1.Text = "";
+                MessageLbl2.Text = "";
                 cart = getCart();
                 int d;
                 int b;
@@ -91,11 +92,11 @@ namespace CIS411FinalProject.WebForms
                         if (!checkForDuplicate(selectedDvd, cart))
                         {
                             cart.Add(co);
-                            MessageLbl2.Text += "Item added: " + selectedDvd.Title.ToString() + ", Quantity: " + d.ToString();
+                            MessageLbl2.Text = "Item added: " + selectedDvd.Title.ToString() + ", Quantity: " + d.ToString();
                         }
                         else
                         {
-                            MessageLbl2.Text += "The item "+ selectedDvd.Title.ToString() +" has already been added to the cart. Please select a different item.";
+                            MessageLbl2.Text = "The item "+ selectedDvd.Title.ToString() +" has already been added to the cart. Please select a different item.";
                         }
                     }
                     Session["cart"] = cart;
@@ -128,7 +129,7 @@ namespace CIS411FinalProject.WebForms
         public List<Product> getBooks()
         {
             List<Product> result = new List<Product>();
-            allProducts = (List<Product>)Session["AllProducts"];
+            allProducts = getAllProducts();
             var books =
                 from p in allProducts
                 where p.ProductType == "Book"
@@ -145,7 +146,8 @@ namespace CIS411FinalProject.WebForms
         public List<Product> getDvds()
         {
             List<Product> result = new List<Product>();
-            allProducts = (List<Product>)Session["AllProducts"];
+            allProducts = getAllProducts();
+
             var dvds =
                 from p in allProducts
                 where p.ProductType == "DVD"
