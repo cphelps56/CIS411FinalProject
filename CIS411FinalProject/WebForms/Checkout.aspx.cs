@@ -25,6 +25,7 @@ namespace CIS411FinalProject.WebForms
 
         protected void AcceptChangeBtn_Click(object sender, EventArgs e)
         {
+            messageLbl.Text = "";
             cartObj = getCart();
             CartObject selectedCartObject = cartObj[cartListBox.SelectedIndex];
             int q;

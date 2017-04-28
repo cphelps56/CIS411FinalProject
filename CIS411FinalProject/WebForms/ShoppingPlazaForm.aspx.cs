@@ -103,7 +103,7 @@ namespace CIS411FinalProject.WebForms
                 }
                 else
                 {
-                    MessageLbl1.Text = "One of the quantities must be more than 0. Otherwise, Please Click Exit.";
+                    MessageLbl1.Text = "One of the quantities must be a whole number greater than zero. Otherwise, Please Click Exit.";
                 }
             }
         }
